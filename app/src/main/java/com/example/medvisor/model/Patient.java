@@ -13,6 +13,14 @@ public class Patient {
     private int weight;
     private int Height;
 
+    public Patient(String name, String email, String password, Date birthDate, String gender) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.birthDate = birthDate;
+        this.gender = gender;
+    }
+
     public Patient(int id, String name, String email, String password, Date createdDate,
                    Date birthDate, String gender, int weight, int height) {
         this.id = id;

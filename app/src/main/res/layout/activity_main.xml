@@ -30,6 +30,20 @@
         android:text="@string/user_login" />
 
     <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shapelogin"
+        android:onClick="register"
+        android:padding="15dp"
+        android:shadowColor="@android:color/transparent"
+        android:text="register" />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/logout"

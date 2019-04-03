@@ -8,4 +8,6 @@ import retrofit2.http.*;
 public interface PatientApi {
     @POST("/api/patients/login")
     Call<Patient> login(@Body Login patient);
+    @POST("/api/patients")
+    Call<Patient> regeister(@Body Patient patient);
 }
