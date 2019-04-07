@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Medvisor</string>
+    <string name="user_name">user name</string>
     <string name="user_email">Email</string>
     <string name="user_password">Password</string>
     <string name="user_forget_password">Forget Password?</string>
@@ -15,7 +16,12 @@
     <string name="user_welcome">I can help you find out what\'s going on. Just start a disease prediction</string>
     <string name="menu_open">Open</string>
     <string name="menu_close">Close</string>
+    <string name="user_register">Sign Up</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="user_Birthdate">Birth date</string>
+    <string name="user_male">Male</string>
+    <string name="user_female">Female</string>
+    <string name="data_error">Please enter valid data</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>

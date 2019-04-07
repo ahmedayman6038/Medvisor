@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Medvisor</string>
+    <string name="user_name">اسم المستخدم </string>
     <string name="user_email">البريد الالكترونى</string>
     <string name="user_password">كلمة المرور</string>
     <string name="user_forget_password">نسيت كلمة المرور؟</string>
@@ -16,4 +17,9 @@
     <string name="user_welcome">انا اقدر اساعدك عشان تعرف فيك اية. فقط ابدا بتنبؤ المرض</string>
     <string name="search_doctors">البحث عن طبيب</string>
     <string name="list_specialities">التخصصات</string>
+    <string name="user_register">تسجيل </string>
+    <string name="user_Birthdate">تاريخ الميلاد</string>
+    <string name="user_male">ذكر</string>
+    <string name="user_female">انثي</string>
+    <string name="data_error">الرجاء ادخال بيانات سليمة</string>
 </resources>
