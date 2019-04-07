@@ -2,9 +2,19 @@
     <string name="app_name">Medvisor</string>
     <string name="user_email">Email</string>
     <string name="user_password">Password</string>
-    <string name="user_forget_password">Forget Password</string>
+    <string name="user_forget_password">Forget Password?</string>
+    <string name="user_register"><u>Dont\'t have account? Sign up now!</u></string>
     <string name="user_login">Login</string>
     <string name="user_logout">Logout</string>
+    <string name="user_profile">Profile</string>
+    <string name="user_feedback">Send feedback</string>
+    <string name="user_prediction">Start prediction</string>
+    <string name="user_result">Previous results</string>
+    <string name="search_doctors">Search on doctor</string>
+    <string name="list_specialities">Specialities</string>
+    <string name="user_welcome">I can help you find out what\'s going on. Just start a disease prediction</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_close">Close</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -18,4 +28,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_draw">DrawActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>

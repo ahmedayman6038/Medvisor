@@ -31,34 +31,14 @@ public class LoginActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     private EditText emailTxt;
     private EditText passwordTxt;
-    private Button loginBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         sharedpreferences = getSharedPreferences(MainActivity.MyPREFERENCES, Context.MODE_PRIVATE);
-        emailTxt = (EditText) findViewById(R.id.email);
-        passwordTxt = (EditText) findViewById(R.id.password);
-        loginBtn = (Button) findViewById(R.id.login);
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String userEmail = emailTxt.getText().toString();
-                String userPassword = passwordTxt.getText().toString();
-                if(!TextUtils.isEmpty(userEmail) && !TextUtils.isEmpty(userPassword)){
-                    if(Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()){
-                        Login user = new Login(userEmail, userPassword);
-                        loginToSystem(user);
-                    }else{
-                        Toast toast = Toast.makeText(getApplicationContext(), "Please enter valid email", Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                }else{
-                    Toast toast = Toast.makeText(getApplicationContext(), "Please fill all inputs", Toast.LENGTH_SHORT);
-                    toast.show();
-                }
-            }
-        });
+        emailTxt = findViewById(R.id.email);
+        passwordTxt = findViewById(R.id.password);
     }
 
     public void loginToSystem(Login user){
@@ -80,9 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("UserName", patient.getName());
                     editor.putString("UserEmail", patient.getEmail());
                     editor.commit();
-                  /*  Toast toast = Toast.makeText(getApplicationContext(), "Patient ID " + patient.getId(), Toast.LENGTH_SHORT);
-                    toast.show();*/
-                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                     startActivity(intent);
                 }else if(response.code() == 404){
                     Toast toast = Toast.makeText(getApplicationContext(), "Patient Not Founded", Toast.LENGTH_SHORT);
@@ -100,5 +78,22 @@ public class LoginActivity extends AppCompatActivity {
                 Log.e("Failure ",""+throwable.getLocalizedMessage());
             }
         });
+    }
+
+    public void Login(View view) {
+        String userEmail = emailTxt.getText().toString();
+        String userPassword = passwordTxt.getText().toString();
+        if(!TextUtils.isEmpty(userEmail) && !TextUtils.isEmpty(userPassword)){
+            if(Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()){
+                Login user = new Login(userEmail, userPassword);
+                loginToSystem(user);
+            }else{
+                Toast toast = Toast.makeText(getApplicationContext(), "Please enter valid email", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        }else{
+            Toast toast = Toast.makeText(getApplicationContext(), "Please fill all inputs", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 }

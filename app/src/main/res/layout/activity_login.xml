@@ -4,15 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/back"
+    android:background="@color/white"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="20dp">
 
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </FrameLayout>
     <ImageView
-        android:layout_width="90dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/login"/>
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/logo"/>
 
     <EditText
         android:id="@+id/email"
@@ -25,9 +31,9 @@
         android:hint="@string/user_email"
         android:inputType="textEmailAddress"
         android:padding="15dp"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/blue"
+        android:textColorHint="@color/blue" />
 
     <EditText
         android:id="@+id/password"
@@ -40,9 +46,9 @@
         android:hint="@string/user_password"
         android:inputType="textPassword"
         android:padding="15dp"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/blue"
+        android:textColorHint="@color/blue" />
 
     <TextView
         android:layout_width="240dp"
@@ -54,9 +60,10 @@
         android:drawableLeft="@drawable/ic_lock_open_black_24dp"
         android:drawablePadding="6dp"
         android:gravity="center"
+        android:textStyle="bold"
         android:padding="6dp"
         android:text="@string/user_forget_password"
-        android:textColor="@color/white" />
+        android:textColor="@color/blue" />
 
     <Button
         android:layout_width="match_parent"
@@ -65,10 +72,26 @@
         android:text="@string/user_login"
         android:shadowColor="@android:color/transparent"
         android:padding="15dp"
+        android:onClick="Login"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="0dp"
-        android:background="@drawable/shapelogin"/>
+        android:textColor="@color/blue"
+        android:background="@drawable/shapeinput"/>
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </FrameLayout>
+    <TextView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="@string/user_register"
+        android:textColor="@color/blue" />
 
 </LinearLayout>
