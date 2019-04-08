@@ -32,9 +32,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RegisterActivity extends AppCompatActivity {
-    static final String BASE_URL = "http://ahmed6038-001-site1.btempurl.com/";
     private static Retrofit retrofit = null;
-    private final static String API_KEY = "";
     SharedPreferences sharedpreferences;
     private EditText usernameTxt;
     private EditText emailTxt;
@@ -43,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
     private RadioButton male;
     ProgressBar registerProgress;
     Button registerBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity {
                     .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
                     .create();
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
+                    .baseUrl(MainActivity.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
         }
@@ -137,14 +136,13 @@ public class RegisterActivity extends AppCompatActivity {
         Intent loginIntent = new Intent(RegisterActivity.this,LoginActivity.class);
         startActivity(loginIntent);
     }
+
     public Date getDateFromDatePicker(DatePicker datePicker){
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth();
         int year =  datePicker.getYear();
-
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month, day);
-
         return calendar.getTime();
     }
 }

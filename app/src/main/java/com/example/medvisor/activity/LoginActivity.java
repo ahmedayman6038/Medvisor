@@ -28,14 +28,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
-    public static final String BASE_URL = "http://ahmed6038-001-site1.btempurl.com/";
     private static Retrofit retrofit = null;
-    private final static String API_KEY = "";
     SharedPreferences sharedpreferences;
     private EditText emailTxt;
     private EditText passwordTxt;
     ProgressBar loginProgress;
     Button loginBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                     .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
                     .create();
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
+                    .baseUrl(MainActivity.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
         }
