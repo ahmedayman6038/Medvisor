@@ -1,44 +1,38 @@
 <resources>
     <string name="app_name">Medvisor</string>
+
+    <!-- Strings related to user view data -->
     <string name="user_name">user name</string>
     <string name="user_email">Email</string>
     <string name="user_password">Password</string>
     <string name="user_forget_password">Forget Password?</string>
-    <string name="user_register"><u>Dont\'t have account? Sign up now!</u></string>
+    <string name="user_signup_now"><u>Dont\'t have account? Sign up now!</u></string>
     <string name="user_login">Login</string>
     <string name="user_logout">Logout</string>
     <string name="user_profile">Profile</string>
     <string name="user_feedback">Send feedback</string>
-    <string name="user_prediction">Start prediction</string>
-    <string name="user_result">Previous results</string>
-    <string name="search_doctors">Search on doctor</string>
-    <string name="list_specialities">Specialities</string>
+    <string name="user_start_prediction">Start prediction</string>
+    <string name="user_previous_results">Previous results</string>
+    <string name="user_gender">Gender</string>
+    <string name="user_login_now"><u>Already have account? Login now!</u></string>
+    <string name="user_search_doctors">Search on doctor</string>
+    <string name="user_list_specialities">Specialities</string>
     <string name="user_welcome">I can help you find out what\'s going on. Just start a disease prediction</string>
-    <string name="menu_open">Open</string>
-    <string name="menu_close">Close</string>
-    <string name="user_register">Sign Up</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="user_Birthdate">Birth date</string>
+    <string name="user_menu_open">Open</string>
+    <string name="user_menu_close">Close</string>
+    <string name="user_signup">Sign Up</string>
+    <string name="user_birthdate">Birth date</string>
     <string name="user_male">Male</string>
     <string name="user_female">Female</string>
-    <string name="data_error">Please enter valid data</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
-    <string name="title_activity_draw">DrawActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+
+    <!-- Strings related to error view -->
+    <string name="error_general">Something goes wrong, please try again</string>
+    <string name="error_empty_data">Please fill all empty fields</string>
+    <string name="error_invalid_email">Please enter valid email</string>
+    <string name="error_short_password">Password should be at least 6 character</string>
+    <string name="error_user_notfound">User not founded</string>
+    <string name="error_server">Server error</string>
+    <string name="error_taken_data">User email or password already taken</string>
+    <string name="error_login">Login failed, try again</string>
+
 </resources>

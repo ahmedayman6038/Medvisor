@@ -25,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/shapeinput"
-        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:background="@drawable/shape_input"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
         android:drawablePadding="10dp"
         android:hint="@string/user_email"
         android:inputType="textEmailAddress"
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/shapeinput"
+        android:background="@drawable/shape_input"
         android:drawableLeft="@drawable/ic_lock_black_24dp"
         android:drawablePadding="10dp"
         android:hint="@string/user_password"
@@ -64,21 +64,31 @@
         android:padding="6dp"
         android:text="@string/user_forget_password"
         android:textColor="@color/blue" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/login"
-        android:text="@string/user_login"
-        android:shadowColor="@android:color/transparent"
-        android:padding="15dp"
-        android:onClick="Login"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="0dp"
-        android:textColor="@color/blue"
-        android:background="@drawable/shapeinput"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginBtn"
+            android:text="@string/user_login"
+            android:shadowColor="@android:color/transparent"
+            android:padding="15dp"
+            android:onClick="Login"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+        <ProgressBar
+            android:id="@+id/loginProgress"
+            android:indeterminateDrawable="@drawable/progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -87,11 +97,12 @@
     <TextView
         android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="16dp"
-        android:text="@string/user_register"
+        android:textSize="15dp"
+        android:onClick="Register"
+        android:text="@string/user_signup_now"
         android:textColor="@color/blue" />
 
 </LinearLayout>

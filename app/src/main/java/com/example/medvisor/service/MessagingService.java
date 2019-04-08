@@ -1,4 +1,4 @@
-package com.example.medvisor.activity;
+package com.example.medvisor.service;
 
 
 
@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import com.example.medvisor.R;
+import com.example.medvisor.activity.MainActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessagingService;

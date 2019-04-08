@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
                 String userID = sharedpreferences.getString("UserID","");
                 if(userID.equals("")){
-                    Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-                    startActivity(intent);
+                    Intent loginIntent = new Intent(MainActivity.this,LoginActivity.class);
+                    startActivity(loginIntent);
                 }else{
-                    Intent intent = new Intent(MainActivity.this,HomeActivity.class);
-                    startActivity(intent);
+                    Intent homeIntent = new Intent(MainActivity.this,HomeActivity.class);
+                    startActivity(homeIntent);
                 }
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 finish();

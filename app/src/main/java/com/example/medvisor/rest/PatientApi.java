@@ -9,5 +9,5 @@ public interface PatientApi {
     @POST("/api/patients/login")
     Call<Patient> login(@Body Login patient);
     @POST("/api/patients")
-    Call<Patient> regeister(@Body Patient patient);
+    Call<Patient> register(@Body Patient patient);
 }
