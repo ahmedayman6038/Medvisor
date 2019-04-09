@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
     public void Register(View view) {
         Intent registerIntent = new Intent(LoginActivity.this,RegisterActivity.class);
         startActivity(registerIntent);
-        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         finish();
     }
 }

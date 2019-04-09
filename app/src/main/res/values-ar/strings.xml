@@ -25,7 +25,7 @@
     <string name="user_female">انثي</string>
     <string name="user_gender">النوع</string>
     <string name="user_login_now"><u>لديك حساب بالفعل؟ سجل دخول الان!</u></string>
-
+    <string name="user_symptom_search">مثال: صداع</string>
     <!-- Strings related to error view -->
     <string name="error_general">حدث خطأ ما, برجاء المحاولة مرة اخرى</string>
     <string name="error_empty_data">برجاء ملئ جميع الحقول</string>

@@ -52,4 +52,11 @@ public class HomeActivity extends AppCompatActivity {
         Intent loginIntent = new Intent(HomeActivity.this,LoginActivity.class);
         startActivity(loginIntent);
     }
+
+    public void startPrediction(View view) {
+        Intent predictionIntent = new Intent(HomeActivity.this,PredictionActivity.class);
+        startActivity(predictionIntent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        finish();
+    }
 }

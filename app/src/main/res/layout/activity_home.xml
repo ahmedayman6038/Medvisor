@@ -36,13 +36,9 @@
             android:text="@string/user_start_prediction"
             android:shadowColor="@android:color/transparent"
             android:padding="15dp"
-            android:textSize="20dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="0dp"
-            android:textColor="@color/blue"
-            android:background="@drawable/shape_input"/>
+            android:onClick="startPrediction"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
