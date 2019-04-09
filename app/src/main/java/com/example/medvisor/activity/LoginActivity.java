@@ -9,6 +9,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -44,6 +46,8 @@ public class LoginActivity extends AppCompatActivity {
         passwordTxt         = findViewById(R.id.password);
         loginProgress       = findViewById(R.id.loginProgress);
         loginBtn            = findViewById(R.id.loginBtn);
+      //  Animation lefttori = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.left_to_right);
+      //  loginBtn.startAnimation(lefttori);
     }
 
     public void loginToSystem(Login user){
@@ -116,5 +120,7 @@ public class LoginActivity extends AppCompatActivity {
     public void Register(View view) {
         Intent registerIntent = new Intent(LoginActivity.this,RegisterActivity.class);
         startActivity(registerIntent);
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+        finish();
     }
 }
