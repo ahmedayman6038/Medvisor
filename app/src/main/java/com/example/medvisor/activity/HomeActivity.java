@@ -54,7 +54,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void startPrediction(View view) {
-        Intent predictionIntent = new Intent(HomeActivity.this,PredictionActivity.class);
+        Intent predictionIntent = new Intent(HomeActivity.this, SymptomActivity.class);
         startActivity(predictionIntent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         finish();

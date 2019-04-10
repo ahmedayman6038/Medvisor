@@ -3,7 +3,7 @@
     <string name="app_name">Medvisor</string>
 
     <!-- Strings related to user view data -->
-    <string name="user_name">اسم المستخدم </string>
+    <string name="user_name">اسم المستخدم</string>
     <string name="user_email">البريد الالكترونى</string>
     <string name="user_password">كلمة المرور</string>
     <string name="user_forget_password">نسيت كلمة المرور؟</string>
@@ -26,6 +26,9 @@
     <string name="user_gender">النوع</string>
     <string name="user_login_now"><u>لديك حساب بالفعل؟ سجل دخول الان!</u></string>
     <string name="user_symptom_search">مثال: صداع</string>
+    <string name="user_prediction_question">هل تشعر باى من هذة الاعراض؟</string>
+    <string name="user_home_page">الرئيسية</string>
+
     <!-- Strings related to error view -->
     <string name="error_general">حدث خطأ ما, برجاء المحاولة مرة اخرى</string>
     <string name="error_empty_data">برجاء ملئ جميع الحقول</string>

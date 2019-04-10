@@ -25,6 +25,9 @@
     <string name="user_male">Male</string>
     <string name="user_female">Female</string>
     <string name="user_symptom_search">e.g. صداع</string>
+    <string name="user_prediction_question">Are you face any of these symptoms?</string>
+    <string name="user_home_page">Home</string>
+
     <!-- Strings related to error view -->
     <string name="error_general">Something goes wrong, please try again</string>
     <string name="error_empty_data">Please fill all empty fields</string>

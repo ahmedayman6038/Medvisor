@@ -147,4 +147,11 @@ public class RegisterActivity extends AppCompatActivity {
         calendar.set(year, month, day);
         return calendar.getTime();
     }
+
+    @Override
+    public void onStop() {
+        registerBtn.setVisibility(View.VISIBLE);
+        registerProgress.setVisibility(View.INVISIBLE);
+        super.onStop();
+    }
 }

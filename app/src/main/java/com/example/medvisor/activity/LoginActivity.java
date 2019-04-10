@@ -123,4 +123,11 @@ public class LoginActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         finish();
     }
+
+    @Override
+    public void onStop() {
+        loginBtn.setVisibility(View.VISIBLE);
+        loginProgress.setVisibility(View.INVISIBLE);
+        super.onStop();
+    }
 }
