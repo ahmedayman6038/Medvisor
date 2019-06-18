@@ -13,11 +13,19 @@
         android:gravity="center"
         android:padding="20dp"
         android:orientation="vertical">
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3">
+            android:layout_weight="1">
+        </FrameLayout>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logotext"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
         </FrameLayout>
         <TextView
             android:id="@+id/welcome"
@@ -25,7 +33,7 @@
             android:layout_height="200dp"
             android:padding="30dp"
             android:textSize="20dp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:layout_marginBottom="20dp"
             android:background="@drawable/shape_input"
             android:text="@string/user_welcome" />
@@ -87,6 +95,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="20dp"
+                    android:onClick="ShowProfile"
                     android:text="@string/user_profile" />
                 <ImageView
                     android:layout_width="30dp"
@@ -105,6 +114,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="20dp"
+                    android:onClick="ShowResults"
                     android:text="@string/user_previous_results" />
                 <ImageView
                     android:layout_width="30dp"
@@ -123,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="20dp"
+                    android:onClick="SearchDoctor"
                     android:text="@string/user_search_doctors" />
                 <ImageView
                     android:layout_width="30dp"
@@ -141,6 +152,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="20dp"
+                    android:onClick="Specialties"
                     android:text="@string/user_list_specialities" />
                 <ImageView
                     android:layout_width="30dp"
@@ -159,6 +171,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="20dp"
+                    android:onClick="SendFeedback"
                     android:text="@string/user_feedback" />
                 <ImageView
                     android:layout_width="30dp"

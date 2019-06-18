@@ -10,6 +10,10 @@
         <item name="android:textViewStyle">@style/MyTextViewStyle</item>
         <item name="android:buttonStyle">@style/MyButtonStyle</item>
         <item name="editTextStyle">@style/MyEditTextStyle</item>
+
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="android:textColorHint">@color/blue</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -32,5 +36,6 @@
     <style name="MyEditTextStyle" parent="android:Widget.EditText">
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
+
 
 </resources>

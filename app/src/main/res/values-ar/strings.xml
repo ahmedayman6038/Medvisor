@@ -28,6 +28,29 @@
     <string name="user_symptom_search">مثال: صداع</string>
     <string name="user_prediction_question">هل تشعر باى من هذة الاعراض؟</string>
     <string name="user_home_page">الرئيسية</string>
+    <string name="user_dont_have_symptom">ليس لدى اى من هذة الاعراض</string>
+    <string name="user_end_prediction">لا تنس أن هذا ليس تشخيصًا طبيًا. إذا كنت في شك ، فمن الأفضل دائمًا طلب المشورة من أخصائي طبي.</string>
+    <string name="user_view_result">ظهور النتائج</string>
+    <string name="user_predicted_diseases">الامراض المتوقعة</string>
+    <string name="user_predicted_doctors">الدكاترة المقترحة</string>
+    <string name="user_weight">الوزن (كجم)</string>
+    <string name="user_height">الطول (سم)</string>
+    <string name="user_update">تعديل</string>
+    <string name="user_reset">اعادة تعيين كلمة المرور</string>
+    <string name="user_confirm_password">تاكيد كلمة المرور</string>
+    <string name="user_feedback_title">العنوان</string>
+    <string name="user_feedback_content">المحتوى</string>
+    <string name="user_send">ارسال</string>
+    <string name="user_specilaty">التخصصات</string>
+    <string name="user_prediction_result">نتيجة التنبؤ</string>
+    <string name="user_doctor_name">اسم الدكتور</string>
+    <string name="user_delete_result">مسح النتيجة</string>
+    <string name="user_back">عودة</string>
+    <string name="user_doctor_profile">ملف الدكتور</string>
+    <string name="user_doctor_city">المدينة</string>
+    <string name="user_doctor_address">العنوان</string>
+    <string name="user_doctor_information">معلومات</string>
+    <string name="user_doctor_rate">تقييم الدكتور</string>
 
     <!-- Strings related to error view -->
     <string name="error_general">حدث خطأ ما, برجاء المحاولة مرة اخرى</string>
@@ -38,4 +61,9 @@
     <string name="error_server">حدث خطأ بالخادم</string>
     <string name="error_taken_data">البريد الالكترونى او كلمة المرور ماخوذة من قبل</string>
     <string name="error_login">فشل فى تسجيل الدخول, حاول مرة اخرى</string>
+    <string name="error_taken_email">البريد الالكترونى ماخوذ من قبل</string>
+    <string name="error_notfound_email">هذا البريد الالكترونى غير مسجل</string>
+    <string name="error_taken_password">كلمة المرور ماخوذة من قبل</string>
+    <string name="error_notmatch_password">كلمة المرور غير متوافقة</string>
+
 </resources>

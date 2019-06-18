@@ -5,49 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:gravity="center"
     android:padding="20dp"
     android:orientation="vertical">
     <TextView
+        android:id="@+id/header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        android:text="@string/user_prediction_question"/>
+        android:text="@string/user_previous_results"
+        android:textColor="@color/blue"
+        android:textSize="25dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="1">
         <ListView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="10.0sp"
-            android:id="@+id/symptomsResult"/>
-        <ProgressBar
-            android:id="@+id/resultProgress"
-            android:indeterminateDrawable="@drawable/progress"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_centerInParent="true"
-            android:visibility="invisible" />
+            android:divider="#34ace0"
+            android:dividerHeight="2px"
+            android:id="@+id/assessments"/>
     </LinearLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/dontHave"
-        android:text="@string/user_dont_have_symptom"
-        android:shadowColor="@android:color/transparent"
-        android:padding="15dp"
-        android:onClick="symptomNotFounded"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/white"
-        android:background="@drawable/shape_button"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

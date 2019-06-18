@@ -27,6 +27,29 @@
     <string name="user_symptom_search">e.g. صداع</string>
     <string name="user_prediction_question">Are you face any of these symptoms?</string>
     <string name="user_home_page">Home</string>
+    <string name="user_dont_have_symptom">Don\'t have any of theses symptoms</string>
+    <string name="user_end_prediction">Don\'t forget that this is not a medical diagnosis. If in doubt it is always best to seek advice from a medical professional.</string>
+    <string name="user_view_result">View Result</string>
+    <string name="user_predicted_diseases">Predicted Diseases</string>
+    <string name="user_predicted_doctors">Predicted Doctors</string>
+    <string name="user_weight">Weight (kg)</string>
+    <string name="user_height">Height (cm)</string>
+    <string name="user_update">Update</string>
+    <string name="user_reset">Reset Password</string>
+    <string name="user_confirm_password">Confirm Password</string>
+    <string name="user_feedback_title">Title</string>
+    <string name="user_feedback_content">Content</string>
+    <string name="user_send">Send</string>
+    <string name="user_specilaty">Specialties</string>
+    <string name="user_prediction_result">Prediction Result</string>
+    <string name="user_doctor_name">Doctor Name</string>
+    <string name="user_delete_result">Delete Result</string>
+    <string name="user_back">Back</string>
+    <string name="user_doctor_profile">Doctor Profile</string>
+    <string name="user_doctor_city">City</string>
+    <string name="user_doctor_address">Address</string>
+    <string name="user_doctor_information">Information</string>
+    <string name="user_doctor_rate">Rate Doctor</string>
 
     <!-- Strings related to error view -->
     <string name="error_general">Something goes wrong, please try again</string>
@@ -37,5 +60,9 @@
     <string name="error_server">Server error</string>
     <string name="error_taken_data">User email or password already taken</string>
     <string name="error_login">Login failed, try again</string>
+    <string name="error_taken_email">This email already taken</string>
+    <string name="error_notfound_email">This email not registered</string>
+    <string name="error_taken_password">This password already taken</string>
+    <string name="error_notmatch_password">Password not matched</string>
 
 </resources>

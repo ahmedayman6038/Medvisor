@@ -2,7 +2,10 @@ package com.example.medvisor.activity;
 
 import com.example.medvisor.R;
 import com.example.medvisor.model.Patient;
+import com.example.medvisor.rest.AddCookiesInterceptor;
 import com.example.medvisor.rest.PatientApi;
+import com.example.medvisor.rest.ReceivedCookiesInterceptor;
+import com.example.medvisor.rest.RetrofitClient;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -24,7 +27,9 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,15 +37,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RegisterActivity extends AppCompatActivity {
-    private static Retrofit retrofit = null;
-    SharedPreferences sharedpreferences;
+    private Retrofit retrofit;
+    private SharedPreferences sharedpreferences;
     private EditText usernameTxt;
     private EditText emailTxt;
     private EditText passwordTxt;
     private DatePicker birthDate;
     private RadioButton male;
-    ProgressBar registerProgress;
-    Button registerBtn;
+    private ProgressBar registerProgress;
+    private Button registerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,18 +88,10 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    void RegisterToSystem(Patient user) {
+    private void RegisterToSystem(Patient user) {
         registerBtn.setVisibility(View.INVISIBLE);
         registerProgress.setVisibility(View.VISIBLE);
-        if (retrofit == null) {
-            Gson gson = new GsonBuilder()
-                    .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
-                    .create();
-            retrofit = new Retrofit.Builder()
-                    .baseUrl(MainActivity.BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create(gson))
-                    .build();
-        }
+        retrofit = RetrofitClient.getClient();
         final PatientApi patientApi = retrofit.create(PatientApi.class);
         Call<Patient> call = patientApi.register(user);
         call.enqueue(new Callback<Patient>() {
@@ -106,6 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
                     editor.putString("UserID", Integer.toString(patient.getId()));
                     editor.putString("UserName", patient.getName());
                     editor.putString("UserEmail", patient.getEmail());
+                    editor.putString("UserPassword", patient.getPassword());
                     editor.commit();
                     Intent homeIntent = new Intent(RegisterActivity.this,HomeActivity.class);
                     startActivity(homeIntent);
@@ -139,7 +137,7 @@ public class RegisterActivity extends AppCompatActivity {
         finish();
     }
 
-    public Date getDateFromDatePicker(DatePicker datePicker){
+    private Date getDateFromDatePicker(DatePicker datePicker){
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth();
         int year =  datePicker.getYear();

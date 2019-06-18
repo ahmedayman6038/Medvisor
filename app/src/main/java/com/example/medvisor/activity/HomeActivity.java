@@ -17,7 +17,8 @@ import java.util.Locale;
 public class HomeActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private TextView welcomeTxt;
-    SharedPreferences sharedpreferences;
+    private SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,5 +59,30 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(predictionIntent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         finish();
+    }
+
+    public void ShowProfile(View view) {
+        Intent profileIntent = new Intent(HomeActivity.this, PatientProfileActivity.class);
+        startActivity(profileIntent);
+    }
+
+    public void SendFeedback(View view) {
+        Intent feedbackIntent = new Intent(HomeActivity.this,FeedbackActivity.class);
+        startActivity(feedbackIntent);
+    }
+
+    public void Specialties(View view) {
+        Intent specialtiesIntent = new Intent(HomeActivity.this,SpecialtyActivity.class);
+        startActivity(specialtiesIntent);
+    }
+
+    public void SearchDoctor(View view) {
+        Intent doctorsIntent = new Intent(HomeActivity.this,DoctorActivity.class);
+        startActivity(doctorsIntent);
+    }
+
+    public void ShowResults(View view) {
+        Intent predictionsIntent = new Intent(HomeActivity.this,PatientPredictionsActivity.class);
+        startActivity(predictionsIntent);
     }
 }

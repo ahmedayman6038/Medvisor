@@ -11,7 +11,7 @@ public class Patient {
     private Date birthDate;
     private String gender;
     private int weight;
-    private int Height;
+    private int height;
 
     public Patient(String name, String email, String password, Date birthDate, String gender) {
         this.name = name;
@@ -31,7 +31,7 @@ public class Patient {
         this.birthDate = birthDate;
         this.gender = gender;
         this.weight = weight;
-        Height = height;
+        this.height = height;
     }
 
     public int getId() {
@@ -99,10 +99,10 @@ public class Patient {
     }
 
     public int getHeight() {
-        return Height;
+        return height;
     }
 
     public void setHeight(int height) {
-        Height = height;
+        this.height = height;
     }
 }
