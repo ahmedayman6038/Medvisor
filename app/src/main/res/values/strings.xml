@@ -49,7 +49,9 @@
     <string name="user_doctor_city">City</string>
     <string name="user_doctor_address">Address</string>
     <string name="user_doctor_information">Information</string>
-    <string name="user_doctor_rate">Rate Doctor</string>
+    <string name="user_doctor_rate">Your Rating</string>
+    <string name="user_general_rate">General Rate</string>
+    <string name="user_rate_us">Rate Us</string>
 
     <!-- Strings related to error view -->
     <string name="error_general">Something goes wrong, please try again</string>

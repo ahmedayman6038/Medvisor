@@ -50,7 +50,9 @@
     <string name="user_doctor_city">المدينة</string>
     <string name="user_doctor_address">العنوان</string>
     <string name="user_doctor_information">معلومات</string>
-    <string name="user_doctor_rate">تقييم الدكتور</string>
+    <string name="user_doctor_rate">تقيمك</string>
+    <string name="user_general_rate">التقيم العام</string>
+    <string name="user_rate_us">قيمنا</string>
 
     <!-- Strings related to error view -->
     <string name="error_general">حدث خطأ ما, برجاء المحاولة مرة اخرى</string>

@@ -12,6 +12,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.example.medvisor.R;
@@ -36,7 +37,8 @@ public class FeedbackActivity extends AppCompatActivity {
     private EditText contentTxt;
     private SharedPreferences sharedpreferences;
     private String senderEmail;
-
+    private RatingBar rateUs;
+    private String UserID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +46,11 @@ public class FeedbackActivity extends AppCompatActivity {
         backImg        = findViewById(R.id.backImg);
         titleTxt         = findViewById(R.id.feedbacktitle);
         contentTxt         = findViewById(R.id.feedbackcontent);
+        rateUs             = findViewById(R.id.rateUs);
         sharedpreferences = getSharedPreferences(MainActivity.MyPREFERENCES, Context.MODE_PRIVATE);
         String email = sharedpreferences.getString("UserEmail","");
+        UserID = sharedpreferences.getString("UserID","");
+        String rateValue = sharedpreferences.getString(UserID,"");
         String currentLang = Locale.getDefault().getLanguage();
         if(currentLang.equals("ar")){
             backImg.setBackgroundResource(R.drawable.ic_navigate_next_black_24dp);
@@ -55,15 +60,22 @@ public class FeedbackActivity extends AppCompatActivity {
         if(!email.equals("")){
             senderEmail = email;
         }
+        if(!rateValue.equals("")){
+            rateUs.setRating(Integer.parseInt(rateValue));
+        }
     }
 
     public void Send(View view) {
         String title = titleTxt.getText().toString();
         String content = contentTxt.getText().toString();
+        int rate = (int)rateUs.getRating();
         if(!TextUtils.isEmpty(title) &&
                 !TextUtils.isEmpty(content)){
             Mail mail = new Mail(senderEmail,title,content);
             SendFeedback(mail);
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putString(UserID, Integer.toString(rate));
+            editor.commit();
         }else{
             Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.error_empty_data), Toast.LENGTH_SHORT);
             toast.show();

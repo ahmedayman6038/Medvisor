@@ -149,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="@string/user_doctor_rate"
+                android:text="@string/user_general_rate"
                 android:textSize="25dp" />
             <TextView
                 android:id="@+id/doctorRate"
@@ -159,6 +159,13 @@
                 android:text="Cairo"
                 android:layout_marginBottom="10dp"
                 android:textSize="20dp" />
+            <TextView
+                android:id="@+id/txt6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/user_doctor_rate"
+                android:textSize="25dp" />
             <RatingBar
                 android:id="@+id/rateDoctor"
                 android:layout_width="wrap_content"
